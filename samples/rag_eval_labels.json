@@ -1,0 +1,37 @@
+[
+  {
+    "id": "contract_payment_and_liability",
+    "file_path": "samples/contract_sample.txt",
+    "question": "这份合同的服务内容和违约责任是什么？",
+    "document_type": "contract",
+    "expected_terms": ["实施服务", "整改"]
+  },
+  {
+    "id": "contract_support_period",
+    "file_path": "samples/contract_sample.txt",
+    "question": "项目上线后提供多久稳定期支持？",
+    "document_type": "contract",
+    "expected_terms": ["30 天稳定期支持"]
+  },
+  {
+    "id": "invoice_amount",
+    "file_path": "samples/invoice_sample.csv",
+    "question": "这张发票的价税合计是多少？",
+    "document_type": "invoice",
+    "expected_terms": ["128000.00"]
+  },
+  {
+    "id": "report_monthly_volume",
+    "file_path": "samples/report_sample.txt",
+    "question": "本月系统处理了多少份文档？",
+    "document_type": "report",
+    "expected_terms": ["128 份"]
+  },
+  {
+    "id": "report_next_plan",
+    "file_path": "samples/report_sample.txt",
+    "question": "后续计划要评估哪些质量指标？",
+    "document_type": "report",
+    "expected_terms": ["字段级准确率", "召回率", "人工修正成本"]
+  }
+]

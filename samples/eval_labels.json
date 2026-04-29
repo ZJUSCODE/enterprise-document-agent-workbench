@@ -1,0 +1,35 @@
+[
+  {
+    "id": "contract_sample",
+    "file_path": "samples/contract_sample.txt",
+    "expected_document_type": "contract",
+    "expected_fields": {
+      "document_no": "CT-2026-0417",
+      "party_a": "上海示例科技有限公司",
+      "party_b": "北京流程自动化服务有限公司",
+      "effective_date": "2026年4月17日",
+      "amount": "¥128,000.00"
+    }
+  },
+  {
+    "id": "invoice_sample",
+    "file_path": "samples/invoice_sample.csv",
+    "expected_document_type": "invoice",
+    "expected_fields": {
+      "document_no": "INV-2026-0008",
+      "issuer": "北京流程自动化服务有限公司",
+      "date": "2026-04-17",
+      "amount": "128000.00"
+    }
+  },
+  {
+    "id": "report_sample",
+    "file_path": "samples/report_sample.txt",
+    "expected_document_type": "report",
+    "expected_fields": {
+      "title": "企业文档流程自动化月度运行报告",
+      "owner": "ops.demo",
+      "date": "2026-04-18"
+    }
+  }
+]
