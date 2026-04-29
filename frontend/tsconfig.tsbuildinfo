@@ -1,1 +1,0 @@
-{"root":["./src/main.ts","./src/vite-env.d.ts","./src/api/client.ts","./src/types/domain.ts","./src/app.vue","./src/components/approvalqueue.vue","./src/components/auditlogpanel.vue","./src/components/metricspanel.vue","./src/components/ragpanel.vue","./src/components/taskdetail.vue","./src/components/tasktable.vue","./src/components/uploadpanel.vue"],"version":"5.9.3"}
