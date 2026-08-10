@@ -1,0 +1,7 @@
+Document Processing Agreement
+Number: DEMO-CT-003
+Party A: Northlake Example Operations Ltd.
+Party B: Cedar Example Automation Ltd.
+Effective date: 2026-03-12
+Amount: $45,750.00
+The service covers invoice intake, exception review, and auditable export. Critical defects require remediation within seven business days.

@@ -1,0 +1,537 @@
+{
+  "case_count": 20,
+  "top_k": 3,
+  "positive_cases": 17,
+  "negative_cases": 3,
+  "hit_rate": 1.0,
+  "mrr": 1.0,
+  "evidence_recall": 1.0,
+  "negative_abstention_rate": 1.0,
+  "results": [
+    {
+      "id": "contract_01_scope",
+      "question": "试点服务具体包含哪些文档能力？",
+      "expected_terms": [
+        "文档分类",
+        "字段抽取"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/contract_01.txt",
+          "document_type": "contract",
+          "score": 0.9621,
+          "matched_terms": [
+            "试点",
+            "服务",
+            "文档"
+          ],
+          "preview": "合同编号: DEMO-CT-001\n甲方: 杭州星桥示例科技有限公司\n乙方: 苏州云册示例服务有限公司\n生效日期: 2026年1月15日\n总金额: ¥86,500.00\n服务内容: 乙方提供文档分类与字段抽取试点。\n验收要求: 上线后十个工作日内完成问题整改。"
+        }
+      ]
+    },
+    {
+      "id": "contract_01_remediation",
+      "question": "验收发现问题后多久完成整改？",
+      "expected_terms": [
+        "十个工作日",
+        "整改"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/contract_01.txt",
+          "document_type": "contract",
+          "score": 1.188,
+          "matched_terms": [
+            "验收",
+            "问题",
+            "完成",
+            "整改"
+          ],
+          "preview": "合同编号: DEMO-CT-001\n甲方: 杭州星桥示例科技有限公司\n乙方: 苏州云册示例服务有限公司\n生效日期: 2026年1月15日\n总金额: ¥86,500.00\n服务内容: 乙方提供文档分类与字段抽取试点。\n验收要求: 上线后十个工作日内完成问题整改。"
+        }
+      ]
+    },
+    {
+      "id": "contract_02_scope",
+      "question": "协议覆盖哪些扫描件处理步骤？",
+      "expected_terms": [
+        "扫描件 OCR",
+        "索引构建",
+        "审批记录"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/contract_02.txt",
+          "document_type": "contract",
+          "score": 0.9086,
+          "matched_terms": [
+            "协议",
+            "扫描",
+            "描件"
+          ],
+          "preview": "服务协议\n合同编号：DEMO-CT-002\n甲方：宁波远帆示例制造有限公司\n乙方：上海知页示例软件有限公司\n生效日期：2026/02/03\n金额：¥120000.00\n项目范围包括扫描件 OCR、索引构建和审批记录。乙方应在五个工作日内修复阻断问题。"
+        }
+      ]
+    },
+    {
+      "id": "contract_03_service",
+      "question": "What workflow functions are included in the agreement?",
+      "expected_terms": [
+        "invoice intake",
+        "exception review",
+        "auditable export"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/contract_03.txt",
+          "document_type": "contract",
+          "score": 1.3597,
+          "matched_terms": [
+            "in",
+            "the",
+            "agreement"
+          ],
+          "preview": "Document Processing Agreement\nNumber: DEMO-CT-003\nParty A: Northlake Example Operations Ltd.\nParty B: Cedar Example Automation Ltd.\nEffective date: 2026-03-12\nAmount: $45,750.00\nTh"
+        }
+      ]
+    },
+    {
+      "id": "contract_04_duration",
+      "question": "这项服务持续多长时间？",
+      "expected_terms": [
+        "六个月"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/contract_04.txt",
+          "document_type": "contract",
+          "score": 0.297,
+          "matched_terms": [
+            "服务"
+          ],
+          "preview": "合同编号: DEMO-CT-004\n甲方: 成都青禾示例零售有限公司\n乙方: 武汉简流示例信息技术有限公司\n生效日期: 2026-04-20\n总金额: ¥68,000\n服务周期为六个月，覆盖合同归档、风险条款标注与人工复核。发生数据缺失时应在三个工作日内补齐。"
+        }
+      ]
+    },
+    {
+      "id": "contract_05_review",
+      "question": "双方每月复盘哪些质量成本指标？",
+      "expected_terms": [
+        "召回率",
+        "人工修正成本"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/contract_05.txt",
+          "document_type": "contract",
+          "score": 1.7889,
+          "matched_terms": [
+            "双方",
+            "方每",
+            "每月",
+            "月复",
+            "复盘",
+            "成本"
+          ],
+          "preview": "智能文档试点合同\n合同编号：DEMO-CT-005\n甲方：深圳澄海示例供应链有限公司\n乙方：广州方舟示例智能科技有限公司\n生效日期：2026年5月9日\n金额：¥99,900.50\n乙方负责报告解析、证据检索和审批工作台配置。双方每月复盘召回率与人工修正成本。"
+        }
+      ]
+    },
+    {
+      "id": "invoice_01_purpose",
+      "question": "第一张票据对应什么服务？",
+      "expected_terms": [
+        "流程咨询服务"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/invoice_01.csv",
+          "document_type": "invoice",
+          "score": 0.3214,
+          "matched_terms": [
+            "服务"
+          ],
+          "preview": "发票号码 | 开票方 | 购买方 | 开票日期 | 价税合计 | 备注\nDEMO-INV-001 | 北京青岚示例咨询有限公司 | 天津维度示例贸易有限公司 | 2026-01-08 | 18500.00 | 流程咨询服务"
+        }
+      ]
+    },
+    {
+      "id": "invoice_02_amount",
+      "question": "OCR 服务票据的金额是多少？",
+      "expected_terms": [
+        "32680.50"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/invoice_02.csv",
+          "document_type": "invoice",
+          "score": 1.1405,
+          "matched_terms": [
+            "ocr",
+            "服务",
+            "金额"
+          ],
+          "preview": "发票号码 | 供应商 | 购买方 | 日期 | 金额 | 项目\nDEMO-INV-002 | 南京澜图示例数据有限公司 | 合肥长亭示例运营有限公司 | 2026/02/18 | 32680.50 | OCR处理服务"
+        }
+      ]
+    },
+    {
+      "id": "invoice_03_supplier",
+      "question": "Who issued the document indexing invoice?",
+      "expected_terms": [
+        "River Example Systems Ltd."
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/invoice_03.csv",
+          "document_type": "invoice",
+          "score": 2.8866,
+          "matched_terms": [
+            "document",
+            "indexing",
+            "invoice"
+          ],
+          "preview": "invoice number | issuer | buyer | date | total | description\nDEMO-INV-003 | River Example Systems Ltd. | Pine Example Services Ltd. | 2026-03-22 | 7400.00 | document indexing servi"
+        }
+      ]
+    },
+    {
+      "id": "invoice_04_buyer",
+      "question": "审批工作台实施由哪家公司购买？",
+      "expected_terms": [
+        "福州合页示例物流有限公司"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/invoice_04.csv",
+          "document_type": "invoice",
+          "score": 2.6364,
+          "matched_terms": [
+            "审批",
+            "批工",
+            "工作",
+            "作台",
+            "台实",
+            "实施",
+            "公司",
+            "购买"
+          ],
+          "preview": "单据编号 | 开票方 | 购买方 | 开票日期 | 价税合计 | 说明\nDEMO-INV-004 | 厦门知岸示例软件有限公司 | 福州合页示例物流有限公司 | 2026-04-11 | 56880.00 | 审批工作台实施"
+        }
+      ]
+    },
+    {
+      "id": "invoice_05_service",
+      "question": "五月票据购买的是什么服务？",
+      "expected_terms": [
+        "RAG评测服务"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/invoice_05.csv",
+          "document_type": "invoice",
+          "score": 0.6517,
+          "matched_terms": [
+            "购买",
+            "服务"
+          ],
+          "preview": "发票号码 | 供应商 | 购买方 | 日期 | 金额 | 说明\nDEMO-INV-005 | 重庆云栈示例科技有限公司 | 昆明原点示例商贸有限公司 | 2026年5月16日 | 12999.90 | RAG评测服务"
+        }
+      ]
+    },
+    {
+      "id": "report_01_volume",
+      "question": "一月共处理多少文档并有多少进入审批？",
+      "expected_terms": [
+        "240 份",
+        "18 份"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/report_01.txt",
+          "document_type": "report",
+          "score": 1.7315,
+          "matched_terms": [
+            "一月",
+            "处理",
+            "文档",
+            "进入",
+            "审批"
+          ],
+          "preview": "标题: 一月文档自动化运行报告\n负责人: analyst.demo01\n日期: 2026-01-31\n主要结论: 本月处理 240 份文档，其中 18 份进入人工审批。\n改进计划: 增加发票异常字段的复核样本。"
+        }
+      ]
+    },
+    {
+      "id": "report_02_latency",
+      "question": "二月合同平均处理时长是多少？",
+      "expected_terms": [
+        "42 秒"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/report_02.txt",
+          "document_type": "report",
+          "score": 2.7359,
+          "matched_terms": [
+            "二月",
+            "月合",
+            "合同",
+            "平均",
+            "均处",
+            "处理",
+            "理时",
+            "时长"
+          ],
+          "preview": "标题：二月合同审查分析报告\n负责人：ops.demo02\n日期：2026/02/28\n主要结论：合同任务共 96 份，平均处理时长为 42 秒，人工接管 7 份。\n后续计划：补充付款条款和违约责任的标注规范。"
+        }
+      ]
+    },
+    {
+      "id": "report_03_exceptions",
+      "question": "How many exceptions were routed to reviewers in March?",
+      "expected_terms": [
+        "12 exceptions"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/report_03.txt",
+          "document_type": "report",
+          "score": 3.2237,
+          "matched_terms": [
+            "exceptions",
+            "routed",
+            "to",
+            "reviewers",
+            "march"
+          ],
+          "preview": "Title: March Document Quality Report\nOwner: qa.demo03\nDate: 2026-03-31\nSummary: The workflow processed 180 files and routed 12 exceptions to reviewers.\nNext action: Measure field r"
+        }
+      ]
+    },
+    {
+      "id": "report_04_ocr_plan",
+      "question": "四月针对图片模糊问题准备怎样改进？",
+      "expected_terms": [
+        "低清晰度扫描件",
+        "单独评测 OCR"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/report_04.txt",
+          "document_type": "report",
+          "score": 1.5928,
+          "matched_terms": [
+            "四月",
+            "图片",
+            "片模",
+            "模糊",
+            "改进"
+          ],
+          "preview": "标题: 四月票据处理月报\n负责人: finance.demo04\n日期: 2026-04-30\n分析结论: 价税合计字段召回率为 92%，有 9 份票据因图片模糊转人工复核。\n改进计划: 收集低清晰度扫描件并单独评测 OCR。"
+        }
+      ]
+    },
+    {
+      "id": "report_05_metrics",
+      "question": "五月报告记录了哪些检索结果？",
+      "expected_terms": [
+        "Top 3 命中 103 次",
+        "负查询正确拒答 14 次"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/report_05.txt",
+          "document_type": "report",
+          "score": 1.3505,
+          "matched_terms": [
+            "五月",
+            "报告",
+            "记录",
+            "检索"
+          ],
+          "preview": "标题：五月知识检索评测报告\n负责人：rag.demo05\n日期：2026年5月31日\n主要结论：完成 120 次检索测试，Top 3 命中 103 次，负查询正确拒答 14 次。\n后续计划：增加跨段证据问题并记录人工修正成本。"
+        }
+      ]
+    },
+    {
+      "id": "report_05_next",
+      "question": "下一阶段要增加什么问题并记录什么成本？",
+      "expected_terms": [
+        "跨段证据问题",
+        "人工修正成本"
+      ],
+      "expected_hit": true,
+      "retrieved": true,
+      "hit": true,
+      "rank": 1,
+      "reciprocal_rank": 1.0,
+      "evidence_recall": 1.0,
+      "top_hits": [
+        {
+          "rank": 1,
+          "file_id": "samples/benchmark/report_05.txt",
+          "document_type": "report",
+          "score": 1.9113,
+          "matched_terms": [
+            "增加",
+            "问题",
+            "题并",
+            "并记",
+            "记录",
+            "成本"
+          ],
+          "preview": "标题：五月知识检索评测报告\n负责人：rag.demo05\n日期：2026年5月31日\n主要结论：完成 120 次检索测试，Top 3 命中 103 次，负查询正确拒答 14 次。\n后续计划：增加跨段证据问题并记录人工修正成本。"
+        }
+      ]
+    },
+    {
+      "id": "negative_contract_satellite",
+      "question": "卫星轨道倾角和推进器参数是多少？",
+      "expected_terms": [],
+      "expected_hit": false,
+      "retrieved": false,
+      "hit": true,
+      "rank": null,
+      "reciprocal_rank": 0.0,
+      "evidence_recall": 0.0,
+      "top_hits": []
+    },
+    {
+      "id": "negative_invoice_menu",
+      "question": "员工食堂周五菜单有哪些菜？",
+      "expected_terms": [],
+      "expected_hit": false,
+      "retrieved": false,
+      "hit": true,
+      "rank": null,
+      "reciprocal_rank": 0.0,
+      "evidence_recall": 0.0,
+      "top_hits": []
+    },
+    {
+      "id": "negative_report_quantum",
+      "question": "量子计算机的制冷温度是多少？",
+      "expected_terms": [],
+      "expected_hit": false,
+      "retrieved": false,
+      "hit": true,
+      "rank": null,
+      "reciprocal_rank": 0.0,
+      "evidence_recall": 0.0,
+      "top_hits": []
+    }
+  ]
+}

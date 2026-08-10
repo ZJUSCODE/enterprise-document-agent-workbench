@@ -1,37 +1,22 @@
 [
-  {
-    "id": "contract_payment_and_liability",
-    "file_path": "samples/contract_sample.txt",
-    "question": "这份合同的服务内容和违约责任是什么？",
-    "document_type": "contract",
-    "expected_terms": ["实施服务", "整改"]
-  },
-  {
-    "id": "contract_support_period",
-    "file_path": "samples/contract_sample.txt",
-    "question": "项目上线后提供多久稳定期支持？",
-    "document_type": "contract",
-    "expected_terms": ["30 天稳定期支持"]
-  },
-  {
-    "id": "invoice_amount",
-    "file_path": "samples/invoice_sample.csv",
-    "question": "这张发票的价税合计是多少？",
-    "document_type": "invoice",
-    "expected_terms": ["128000.00"]
-  },
-  {
-    "id": "report_monthly_volume",
-    "file_path": "samples/report_sample.txt",
-    "question": "本月系统处理了多少份文档？",
-    "document_type": "report",
-    "expected_terms": ["128 份"]
-  },
-  {
-    "id": "report_next_plan",
-    "file_path": "samples/report_sample.txt",
-    "question": "后续计划要评估哪些质量指标？",
-    "document_type": "report",
-    "expected_terms": ["字段级准确率", "召回率", "人工修正成本"]
-  }
+  {"id":"contract_01_scope","file_path":"samples/benchmark/contract_01.txt","question":"试点服务具体包含哪些文档能力？","document_type":"contract","expected_terms":["文档分类","字段抽取"]},
+  {"id":"contract_01_remediation","file_path":"samples/benchmark/contract_01.txt","question":"验收发现问题后多久完成整改？","document_type":"contract","expected_terms":["十个工作日","整改"]},
+  {"id":"contract_02_scope","file_path":"samples/benchmark/contract_02.txt","question":"协议覆盖哪些扫描件处理步骤？","document_type":"contract","expected_terms":["扫描件 OCR","索引构建","审批记录"]},
+  {"id":"contract_03_service","file_path":"samples/benchmark/contract_03.txt","question":"What workflow functions are included in the agreement?","document_type":"contract","expected_terms":["invoice intake","exception review","auditable export"]},
+  {"id":"contract_04_duration","file_path":"samples/benchmark/contract_04.txt","question":"这项服务持续多长时间？","document_type":"contract","expected_terms":["六个月"]},
+  {"id":"contract_05_review","file_path":"samples/benchmark/contract_05.txt","question":"双方每月复盘哪些质量成本指标？","document_type":"contract","expected_terms":["召回率","人工修正成本"]},
+  {"id":"invoice_01_purpose","file_path":"samples/benchmark/invoice_01.csv","question":"第一张票据对应什么服务？","document_type":"invoice","expected_terms":["流程咨询服务"]},
+  {"id":"invoice_02_amount","file_path":"samples/benchmark/invoice_02.csv","question":"OCR 服务票据的金额是多少？","document_type":"invoice","expected_terms":["32680.50"]},
+  {"id":"invoice_03_supplier","file_path":"samples/benchmark/invoice_03.csv","question":"Who issued the document indexing invoice?","document_type":"invoice","expected_terms":["River Example Systems Ltd."]},
+  {"id":"invoice_04_buyer","file_path":"samples/benchmark/invoice_04.csv","question":"审批工作台实施由哪家公司购买？","document_type":"invoice","expected_terms":["福州合页示例物流有限公司"]},
+  {"id":"invoice_05_service","file_path":"samples/benchmark/invoice_05.csv","question":"五月票据购买的是什么服务？","document_type":"invoice","expected_terms":["RAG评测服务"]},
+  {"id":"report_01_volume","file_path":"samples/benchmark/report_01.txt","question":"一月共处理多少文档并有多少进入审批？","document_type":"report","expected_terms":["240 份","18 份"]},
+  {"id":"report_02_latency","file_path":"samples/benchmark/report_02.txt","question":"二月合同平均处理时长是多少？","document_type":"report","expected_terms":["42 秒"]},
+  {"id":"report_03_exceptions","file_path":"samples/benchmark/report_03.txt","question":"How many exceptions were routed to reviewers in March?","document_type":"report","expected_terms":["12 exceptions"]},
+  {"id":"report_04_ocr_plan","file_path":"samples/benchmark/report_04.txt","question":"四月针对图片模糊问题准备怎样改进？","document_type":"report","expected_terms":["低清晰度扫描件","单独评测 OCR"]},
+  {"id":"report_05_metrics","file_path":"samples/benchmark/report_05.txt","question":"五月报告记录了哪些检索结果？","document_type":"report","expected_terms":["Top 3 命中 103 次","负查询正确拒答 14 次"]},
+  {"id":"report_05_next","file_path":"samples/benchmark/report_05.txt","question":"下一阶段要增加什么问题并记录什么成本？","document_type":"report","expected_terms":["跨段证据问题","人工修正成本"]},
+  {"id":"negative_contract_satellite","file_path":"samples/benchmark/contract_01.txt","question":"卫星轨道倾角和推进器参数是多少？","document_type":"contract","expected_terms":[],"expected_hit":false},
+  {"id":"negative_invoice_menu","file_path":"samples/benchmark/invoice_02.csv","question":"员工食堂周五菜单有哪些菜？","document_type":"invoice","expected_terms":[],"expected_hit":false},
+  {"id":"negative_report_quantum","file_path":"samples/benchmark/report_03.txt","question":"量子计算机的制冷温度是多少？","document_type":"report","expected_terms":[],"expected_hit":false}
 ]

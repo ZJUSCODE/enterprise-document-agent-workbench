@@ -27,7 +27,7 @@ class Settings(BaseSettings):
     app_name: str = "Enterprise Document Workflow Agent"
     app_env: str = "development"
     api_prefix: str = "/api"
-    cors_origins: str = "http://localhost:5173,http://127.0.0.1:5173,http://localhost:5174,http://127.0.0.1:5174"
+    cors_origins: str = "http://localhost:4173,http://127.0.0.1:4173,http://localhost:5174,http://127.0.0.1:5174"
     api_auth_enabled: bool = Field(default=False, alias="API_AUTH_ENABLED")
     api_keys: str = Field(default="", alias="API_KEYS")
 
