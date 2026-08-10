@@ -50,6 +50,7 @@ def test_ci_builds_and_smoke_tests_the_container_stack() -> None:
     assert "docker compose up --build -d" in workflow
     assert "http://127.0.0.1:8000/health" in workflow
     assert "http://127.0.0.1:4173/" in workflow
+    assert "--retry-all-errors" in workflow
     assert "npm run test:e2e:docker" in workflow
     assert "docker compose down -v" in workflow
     assert "RUN npm ci" in dockerfile
