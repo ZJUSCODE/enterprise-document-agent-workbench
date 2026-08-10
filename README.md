@@ -22,6 +22,7 @@
 | --- | --- |
 | [抽取评测报告](docs/evaluation_report.md) | 由隐私安全示例数据生成，包含分类、字段 Precision / Recall / F1 和逐案例明细 |
 | [RAG 评测报告](docs/rag_evaluation_report.md) | 包含 Hit Rate@K、MRR、Evidence Recall、负查询拒答率和逐问题检索片段 |
+| [多格式解析测试](tests/test_multiformat_parsing.py) | 在 CI 中生成并解析隐私安全的 PDF、DOCX、XLSX 和图片 OCR 样本 |
 | [GitHub Actions](https://github.com/ZJUSCODE/enterprise-document-agent-workbench/actions/workflows/ci.yml) | 自动执行 Python 测试、两套离线评测、Vue 构建、本机 Chrome 页面验收和 Docker 全栈验收 |
 | [工作流端到端测试](tests/test_workflow_e2e.py) | 覆盖上传、处理、审批、版本、RAG 和 Markdown / DOCX / PDF 导出 |
 
