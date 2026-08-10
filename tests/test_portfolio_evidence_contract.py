@@ -37,6 +37,7 @@ def test_readme_leads_with_demo_and_generated_evidence() -> None:
     assert "docs/evaluation_report.md" in readme
     assert "docs/rag_evaluation_report.md" in readme
     assert "docs/two-minute-demo.md" in readme
+    assert "tests/test_multiformat_parsing.py" in readme
     assert "隐私安全示例数据" in readme
     assert "当前未提供公网托管演示" in readme
 
@@ -52,6 +53,7 @@ def test_ci_builds_and_smoke_tests_the_container_stack() -> None:
     assert "http://127.0.0.1:4173/" in workflow
     assert "--retry-all-errors" in workflow
     assert "npm run test:e2e:docker" in workflow
+    assert "sudo apt-get install -y tesseract-ocr" in workflow
     assert "docker compose down -v" in workflow
     assert "RUN npm ci" in dockerfile
     assert "RUN npm install" not in dockerfile
