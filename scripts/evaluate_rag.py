@@ -82,18 +82,26 @@ def score_case(db: Session, case: dict[str, Any], top_k: int) -> dict[str, Any]:
         file_id=case.get("file_path"),
     )
     expected_terms = case.get("expected_terms", [])
-    found_rank = next(
-        (rank for rank, hit in enumerate(hits, start=1) if evidence_contains_all(hit, expected_terms)),
-        None,
+    expected_hit = case.get("expected_hit", True)
+    found_rank = (
+        next(
+            (rank for rank, hit in enumerate(hits, start=1) if evidence_contains_all(hit, expected_terms)),
+            None,
+        )
+        if expected_hit
+        else None
     )
+    matched = found_rank is not None if expected_hit else not hits
     return {
         "id": case["id"],
         "question": case["question"],
         "expected_terms": expected_terms,
-        "hit": found_rank is not None,
+        "expected_hit": expected_hit,
+        "retrieved": bool(hits),
+        "hit": matched,
         "rank": found_rank,
         "reciprocal_rank": round(1 / found_rank, 3) if found_rank else 0.0,
-        "evidence_recall": evidence_recall(hits, expected_terms),
+        "evidence_recall": evidence_recall(hits, expected_terms) if expected_hit else 0.0,
         "top_hits": [
             {
                 "rank": rank,
@@ -110,15 +118,23 @@ def score_case(db: Session, case: dict[str, Any], top_k: int) -> dict[str, Any]:
 
 def summarize(results: list[dict[str, Any]], top_k: int) -> dict[str, Any]:
     case_count = len(results)
-    hits = sum(1 for result in results if result["hit"])
-    reciprocal_rank_sum = sum(result["reciprocal_rank"] for result in results)
-    evidence_recall_sum = sum(result["evidence_recall"] for result in results)
+    positive_results = [result for result in results if result.get("expected_hit", True)]
+    negative_results = [result for result in results if not result.get("expected_hit", True)]
+    hits = sum(1 for result in positive_results if result["hit"])
+    reciprocal_rank_sum = sum(result["reciprocal_rank"] for result in positive_results)
+    evidence_recall_sum = sum(result["evidence_recall"] for result in positive_results)
+    positive_count = len(positive_results)
     return {
         "case_count": case_count,
         "top_k": top_k,
-        "hit_rate": round(hits / case_count, 3) if case_count else 0.0,
-        "mrr": round(reciprocal_rank_sum / case_count, 3) if case_count else 0.0,
-        "evidence_recall": round(evidence_recall_sum / case_count, 3) if case_count else 0.0,
+        "positive_cases": positive_count,
+        "negative_cases": len(negative_results),
+        "hit_rate": round(hits / positive_count, 3) if positive_count else 0.0,
+        "mrr": round(reciprocal_rank_sum / positive_count, 3) if positive_count else 0.0,
+        "evidence_recall": round(evidence_recall_sum / positive_count, 3) if positive_count else 0.0,
+        "negative_abstention_rate": round(
+            sum(result["hit"] for result in negative_results) / len(negative_results), 3
+        ) if negative_results else 0.0,
         "results": results,
     }
 
@@ -130,21 +146,25 @@ def build_markdown_report(summary: dict[str, Any]) -> str:
         "## Summary",
         "",
         f"- Case count: {summary['case_count']}",
+        f"- Positive / negative cases: {summary['positive_cases']} / {summary['negative_cases']}",
         f"- Top K: {summary['top_k']}",
         f"- Hit rate@K: {summary['hit_rate']:.3f}",
         f"- MRR: {summary['mrr']:.3f}",
         f"- Evidence recall: {summary['evidence_recall']:.3f}",
+        f"- Negative abstention rate: {summary['negative_abstention_rate']:.3f}",
         "",
         "## Case Details",
         "",
     ]
     for result in summary["results"]:
+        expected_terms = ", ".join(result["expected_terms"])
         lines.extend(
             [
                 f"### {result['id']}",
                 "",
                 f"- Question: {result['question']}",
-                f"- Expected terms: {', '.join(result['expected_terms'])}",
+                f"- Expected terms:{f' {expected_terms}' if expected_terms else ''}",
+                f"- Expected retrieval: `{result['expected_hit']}`",
                 f"- Hit: `{result['hit']}`",
                 f"- Rank: `{result['rank']}`",
                 f"- Evidence recall: `{result['evidence_recall']:.3f}`",

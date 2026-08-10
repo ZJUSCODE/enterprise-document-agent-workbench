@@ -1,6 +1,31 @@
 # 企业文档流程自动化 Agent 工作台
 
-面向企业内部文档处理场景的 AI 工作流系统。项目包含 FastAPI 后端、Celery Worker、PostgreSQL、Redis、MinIO、本地可运行的 Vue3 工作台，以及示例数据、评测脚本和测试入口。
+面向企业内部合同、发票和运行报告的 AI 工作流系统：把上传、解析、OCR、RAG、结构化抽取、风险检查、人工审批、审计和导出串成一条可观察的处理链路。
+
+[![CI](https://github.com/ZJUSCODE/enterprise-document-agent-workbench/actions/workflows/ci.yml/badge.svg)](https://github.com/ZJUSCODE/enterprise-document-agent-workbench/actions/workflows/ci.yml)
+
+![文档 Agent 工作台](frontend-refactor-wide.png)
+
+## 两分钟看懂项目
+
+1. 上传合同、发票或报告，系统记录文件元数据并创建处理任务。
+2. Agent 依次完成解析、分类、RAG 索引、字段抽取、风险检查和模板生成。
+3. 工作台展示每一步工具调用、耗时、字段、异常和引用片段。
+4. 高风险结果进入人工审批；修订会生成新版本并写入审计日志。
+5. 离线评测持续检查分类、字段抽取、证据检索和负查询拒答。
+
+完整操作节奏见 [`docs/two-minute-demo.md`](docs/two-minute-demo.md)。当前未提供公网托管演示；本地演示不需要模型 Key，真实模型调用通过后端 OpenAI-compatible 接口完成。
+
+## 可核验的证据
+
+| 证据 | 说明 |
+| --- | --- |
+| [抽取评测报告](docs/evaluation_report.md) | 由隐私安全示例数据生成，包含分类、字段 Precision / Recall / F1 和逐案例明细 |
+| [RAG 评测报告](docs/rag_evaluation_report.md) | 包含 Hit Rate@K、MRR、Evidence Recall、负查询拒答率和逐问题检索片段 |
+| [GitHub Actions](https://github.com/ZJUSCODE/enterprise-document-agent-workbench/actions/workflows/ci.yml) | 自动执行 Python 测试、两套离线评测、Vue 构建、本机 Chrome 页面验收和 Docker 全栈验收 |
+| [工作流端到端测试](tests/test_workflow_e2e.py) | 覆盖上传、处理、审批、版本、RAG 和 Markdown / DOCX / PDF 导出 |
+
+公开评测使用明确标注的隐私安全示例数据，不代表生产客户数据。报告中的案例数和指标均由评测脚本生成，README 不另行维护一套数字。
 
 ## 求职展示亮点
 
@@ -15,14 +40,6 @@
 求职包装和面试讲法见：`docs/job-readiness.md`。
 项目学习和代码讲解路线见：`docs/project-walkthrough.md`。
 更完整的作品集讲解见：`docs/portfolio-case-study.md`。
-
-推荐 3 分钟演示路线：
-
-1. 打开前端工作台，先看首屏的 Agent 链路、任务指标和评测概览。
-2. 上传 `samples/contract_sample.txt`，选择合同审查模板，观察任务进入解析、抽取、审查、送审流程。
-3. 打开任务详情，讲 Agent trace、字段抽取、风险异常和人工修订。
-4. 用 RAG 面板提问“这份合同的付款方式和违约责任是什么？”，展示引用片段。
-5. 在审批队列通过或退修结果，再展示审计日志和评测指标。
 
 ## 能力范围
 
@@ -68,7 +85,7 @@ docker compose up --build
 
 访问：
 
-- 前端工作台：http://localhost:5173
+- 前端工作台：http://localhost:4173
 - 后端 API：http://localhost:8000/docs
 - MinIO 控制台：http://localhost:9001
 
@@ -91,7 +108,7 @@ python scripts/evaluate_dataset.py --labels samples/eval_labels.json --report-ou
 python scripts/evaluate_rag.py --labels samples/rag_eval_labels.json --report-output docs/rag_evaluation_report.md
 ```
 
-项目包含 GitHub Actions 配置：`.github/workflows/ci.yml`，会执行后端测试、离线抽取评测和前端生产构建。
+项目包含 GitHub Actions 配置：`.github/workflows/ci.yml`，会执行后端测试、两套离线评测、前端生产构建、本机 Chrome 页面验收，以及 Docker 全栈和浏览器跨域链路验收。
 
 后端：
 

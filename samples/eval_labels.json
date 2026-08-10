@@ -1,35 +1,32 @@
 [
-  {
-    "id": "contract_sample",
-    "file_path": "samples/contract_sample.txt",
-    "expected_document_type": "contract",
-    "expected_fields": {
-      "document_no": "CT-2026-0417",
-      "party_a": "上海示例科技有限公司",
-      "party_b": "北京流程自动化服务有限公司",
-      "effective_date": "2026年4月17日",
-      "amount": "¥128,000.00"
-    }
-  },
-  {
-    "id": "invoice_sample",
-    "file_path": "samples/invoice_sample.csv",
-    "expected_document_type": "invoice",
-    "expected_fields": {
-      "document_no": "INV-2026-0008",
-      "issuer": "北京流程自动化服务有限公司",
-      "date": "2026-04-17",
-      "amount": "128000.00"
-    }
-  },
-  {
-    "id": "report_sample",
-    "file_path": "samples/report_sample.txt",
-    "expected_document_type": "report",
-    "expected_fields": {
-      "title": "企业文档流程自动化月度运行报告",
-      "owner": "ops.demo",
-      "date": "2026-04-18"
-    }
-  }
+  {"id":"contract_01_identity","file_path":"samples/benchmark/contract_01.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-001","party_a":"杭州星桥示例科技有限公司","party_b":"苏州云册示例服务有限公司","effective_date":"2026年1月15日"}},
+  {"id":"contract_01_amount","file_path":"samples/benchmark/contract_01.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-001","amount":"¥86,500.00"}},
+  {"id":"contract_02_identity","file_path":"samples/benchmark/contract_02.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-002","party_a":"宁波远帆示例制造有限公司","party_b":"上海知页示例软件有限公司","effective_date":"2026/02/03"}},
+  {"id":"contract_02_amount","file_path":"samples/benchmark/contract_02.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-002","amount":"¥120000.00"}},
+  {"id":"contract_03_identity","file_path":"samples/benchmark/contract_03.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-003","party_a":"Northlake Example Operations Ltd.","party_b":"Cedar Example Automation Ltd.","effective_date":"2026-03-12"}},
+  {"id":"contract_03_amount","file_path":"samples/benchmark/contract_03.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-003","amount":"$45,750.00"}},
+  {"id":"contract_04_identity","file_path":"samples/benchmark/contract_04.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-004","party_a":"成都青禾示例零售有限公司","party_b":"武汉简流示例信息技术有限公司","effective_date":"2026-04-20"}},
+  {"id":"contract_04_amount","file_path":"samples/benchmark/contract_04.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-004","amount":"¥68,000"}},
+  {"id":"contract_05_identity","file_path":"samples/benchmark/contract_05.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-005","party_a":"深圳澄海示例供应链有限公司","party_b":"广州方舟示例智能科技有限公司","effective_date":"2026年5月9日"}},
+  {"id":"contract_05_amount","file_path":"samples/benchmark/contract_05.txt","expected_document_type":"contract","expected_fields":{"document_no":"DEMO-CT-005","amount":"¥99,900.50"}},
+  {"id":"invoice_01_core","file_path":"samples/benchmark/invoice_01.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-001","issuer":"北京青岚示例咨询有限公司","date":"2026-01-08","amount":"18500.00"}},
+  {"id":"invoice_01_finance","file_path":"samples/benchmark/invoice_01.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-001","amount":"18500.00"}},
+  {"id":"invoice_02_core","file_path":"samples/benchmark/invoice_02.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-002","issuer":"南京澜图示例数据有限公司","date":"2026/02/18","amount":"32680.50"}},
+  {"id":"invoice_02_finance","file_path":"samples/benchmark/invoice_02.csv","expected_document_type":"invoice","expected_fields":{"issuer":"南京澜图示例数据有限公司","amount":"32680.50"}},
+  {"id":"invoice_03_core","file_path":"samples/benchmark/invoice_03.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-003","issuer":"River Example Systems Ltd.","date":"2026-03-22","amount":"7400.00"}},
+  {"id":"invoice_03_finance","file_path":"samples/benchmark/invoice_03.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-003","amount":"7400.00"}},
+  {"id":"invoice_04_core","file_path":"samples/benchmark/invoice_04.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-004","issuer":"厦门知岸示例软件有限公司","date":"2026-04-11","amount":"56880.00"}},
+  {"id":"invoice_04_finance","file_path":"samples/benchmark/invoice_04.csv","expected_document_type":"invoice","expected_fields":{"issuer":"厦门知岸示例软件有限公司","amount":"56880.00"}},
+  {"id":"invoice_05_core","file_path":"samples/benchmark/invoice_05.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-005","issuer":"重庆云栈示例科技有限公司","date":"2026年5月16日","amount":"12999.90"}},
+  {"id":"invoice_05_finance","file_path":"samples/benchmark/invoice_05.csv","expected_document_type":"invoice","expected_fields":{"document_no":"DEMO-INV-005","amount":"12999.90"}},
+  {"id":"report_01_core","file_path":"samples/benchmark/report_01.txt","expected_document_type":"report","expected_fields":{"title":"一月文档自动化运行报告","owner":"analyst.demo01","date":"2026-01-31"}},
+  {"id":"report_01_owner","file_path":"samples/benchmark/report_01.txt","expected_document_type":"report","expected_fields":{"title":"一月文档自动化运行报告","owner":"analyst.demo01"}},
+  {"id":"report_02_core","file_path":"samples/benchmark/report_02.txt","expected_document_type":"report","expected_fields":{"title":"二月合同审查分析报告","owner":"ops.demo02","date":"2026/02/28"}},
+  {"id":"report_02_owner","file_path":"samples/benchmark/report_02.txt","expected_document_type":"report","expected_fields":{"title":"二月合同审查分析报告","owner":"ops.demo02"}},
+  {"id":"report_03_core","file_path":"samples/benchmark/report_03.txt","expected_document_type":"report","expected_fields":{"title":"March Document Quality Report","owner":"qa.demo03","date":"2026-03-31"}},
+  {"id":"report_03_owner","file_path":"samples/benchmark/report_03.txt","expected_document_type":"report","expected_fields":{"title":"March Document Quality Report","owner":"qa.demo03"}},
+  {"id":"report_04_core","file_path":"samples/benchmark/report_04.txt","expected_document_type":"report","expected_fields":{"title":"四月票据处理月报","owner":"finance.demo04","date":"2026-04-30"}},
+  {"id":"report_04_owner","file_path":"samples/benchmark/report_04.txt","expected_document_type":"report","expected_fields":{"title":"四月票据处理月报","owner":"finance.demo04"}},
+  {"id":"report_05_core","file_path":"samples/benchmark/report_05.txt","expected_document_type":"report","expected_fields":{"title":"五月知识检索评测报告","owner":"rag.demo05","date":"2026年5月31日"}},
+  {"id":"report_05_owner","file_path":"samples/benchmark/report_05.txt","expected_document_type":"report","expected_fields":{"title":"五月知识检索评测报告","owner":"rag.demo05"}}
 ]

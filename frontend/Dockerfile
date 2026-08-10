@@ -1,9 +1,9 @@
-FROM node:20-alpine AS build
+FROM node:22-alpine AS build
 
 WORKDIR /app/frontend
 
 COPY frontend/package.json frontend/package-lock.json* ./
-RUN npm install
+RUN npm ci
 
 COPY frontend ./
 ARG VITE_API_BASE_URL=http://localhost:8000/api

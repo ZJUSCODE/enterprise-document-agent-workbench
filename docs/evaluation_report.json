@@ -1,0 +1,1100 @@
+{
+  "case_count": 30,
+  "field_accuracy": 0.965,
+  "field_precision": 0.988,
+  "field_recall": 0.965,
+  "field_f1": 0.976,
+  "matched_fields": 82,
+  "predicted_fields": 83,
+  "expected_fields": 85,
+  "classification_accuracy": 1.0,
+  "field_breakdown": {
+    "amount": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 15,
+      "predicted": 15,
+      "total": 15
+    },
+    "date": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 10,
+      "predicted": 10,
+      "total": 10
+    },
+    "document_no": {
+      "accuracy": 0.889,
+      "precision": 1.0,
+      "recall": 0.889,
+      "f1": 0.941,
+      "matched": 16,
+      "predicted": 16,
+      "total": 18
+    },
+    "effective_date": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 5,
+      "predicted": 5,
+      "total": 5
+    },
+    "issuer": {
+      "accuracy": 0.857,
+      "precision": 0.857,
+      "recall": 0.857,
+      "f1": 0.857,
+      "matched": 6,
+      "predicted": 7,
+      "total": 7
+    },
+    "owner": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 10,
+      "predicted": 10,
+      "total": 10
+    },
+    "party_a": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 5,
+      "predicted": 5,
+      "total": 5
+    },
+    "party_b": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 5,
+      "predicted": 5,
+      "total": 5
+    },
+    "title": {
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 10,
+      "predicted": 10,
+      "total": 10
+    }
+  },
+  "results": [
+    {
+      "id": "contract_01_identity",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-001",
+          "actual": "DEMO-CT-001",
+          "matched": true,
+          "predicted": true
+        },
+        "party_a": {
+          "expected": "杭州星桥示例科技有限公司",
+          "actual": "杭州星桥示例科技有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "party_b": {
+          "expected": "苏州云册示例服务有限公司",
+          "actual": "苏州云册示例服务有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "effective_date": {
+          "expected": "2026年1月15日",
+          "actual": "2026年1月15日",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_01_amount",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-001",
+          "actual": "DEMO-CT-001",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "¥86,500.00",
+          "actual": "¥86,500.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_02_identity",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-002",
+          "actual": "DEMO-CT-002",
+          "matched": true,
+          "predicted": true
+        },
+        "party_a": {
+          "expected": "宁波远帆示例制造有限公司",
+          "actual": "宁波远帆示例制造有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "party_b": {
+          "expected": "上海知页示例软件有限公司",
+          "actual": "上海知页示例软件有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "effective_date": {
+          "expected": "2026/02/03",
+          "actual": "2026/02/03",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_02_amount",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-002",
+          "actual": "DEMO-CT-002",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "¥120000.00",
+          "actual": "¥120000.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_03_identity",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-003",
+          "actual": "DEMO-CT-003",
+          "matched": true,
+          "predicted": true
+        },
+        "party_a": {
+          "expected": "Northlake Example Operations Ltd.",
+          "actual": "Northlake Example Operations Ltd.",
+          "matched": true,
+          "predicted": true
+        },
+        "party_b": {
+          "expected": "Cedar Example Automation Ltd.",
+          "actual": "Cedar Example Automation Ltd.",
+          "matched": true,
+          "predicted": true
+        },
+        "effective_date": {
+          "expected": "2026-03-12",
+          "actual": "2026-03-12",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_03_amount",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-003",
+          "actual": "DEMO-CT-003",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "$45,750.00",
+          "actual": "$45,750.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_04_identity",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-004",
+          "actual": "DEMO-CT-004",
+          "matched": true,
+          "predicted": true
+        },
+        "party_a": {
+          "expected": "成都青禾示例零售有限公司",
+          "actual": "成都青禾示例零售有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "party_b": {
+          "expected": "武汉简流示例信息技术有限公司",
+          "actual": "武汉简流示例信息技术有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "effective_date": {
+          "expected": "2026-04-20",
+          "actual": "2026-04-20",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_04_amount",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-004",
+          "actual": "DEMO-CT-004",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "¥68,000",
+          "actual": "¥68,000",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_05_identity",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-005",
+          "actual": "DEMO-CT-005",
+          "matched": true,
+          "predicted": true
+        },
+        "party_a": {
+          "expected": "深圳澄海示例供应链有限公司",
+          "actual": "深圳澄海示例供应链有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "party_b": {
+          "expected": "广州方舟示例智能科技有限公司",
+          "actual": "广州方舟示例智能科技有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "effective_date": {
+          "expected": "2026年5月9日",
+          "actual": "2026年5月9日",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "contract_05_amount",
+      "document_type": "contract",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-CT-005",
+          "actual": "DEMO-CT-005",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "¥99,900.50",
+          "actual": "¥99,900.50",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_01_core",
+      "document_type": "invoice",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-001",
+          "actual": "DEMO-INV-001",
+          "matched": true,
+          "predicted": true
+        },
+        "issuer": {
+          "expected": "北京青岚示例咨询有限公司",
+          "actual": "北京青岚示例咨询有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026-01-08",
+          "actual": "2026-01-08",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "18500.00",
+          "actual": "18500.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_01_finance",
+      "document_type": "invoice",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-001",
+          "actual": "DEMO-INV-001",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "18500.00",
+          "actual": "18500.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_02_core",
+      "document_type": "invoice",
+      "classification_confidence": 0.75,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-002",
+          "actual": "DEMO-INV-002",
+          "matched": true,
+          "predicted": true
+        },
+        "issuer": {
+          "expected": "南京澜图示例数据有限公司",
+          "actual": "南京澜图示例数据有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026/02/18",
+          "actual": "2026/02/18",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "32680.50",
+          "actual": "32680.50",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_02_finance",
+      "document_type": "invoice",
+      "classification_confidence": 0.75,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "issuer": {
+          "expected": "南京澜图示例数据有限公司",
+          "actual": "南京澜图示例数据有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "32680.50",
+          "actual": "32680.50",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_03_core",
+      "document_type": "invoice",
+      "classification_confidence": 0.75,
+      "classification_matched": true,
+      "field_accuracy": 0.5,
+      "field_precision": 0.667,
+      "field_recall": 0.5,
+      "field_f1": 0.571,
+      "matched_fields": 2,
+      "predicted_fields": 3,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-003",
+          "actual": null,
+          "matched": false,
+          "predicted": false
+        },
+        "issuer": {
+          "expected": "River Example Systems Ltd.",
+          "actual": "| buyer | date |",
+          "matched": false,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026-03-22",
+          "actual": "2026-03-22",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "7400.00",
+          "actual": "7400.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": [
+        {
+          "code": "missing_required_field",
+          "severity": "warning",
+          "field": "document_no",
+          "message": "Required field 'document_no' was not confidently extracted"
+        }
+      ]
+    },
+    {
+      "id": "invoice_03_finance",
+      "document_type": "invoice",
+      "classification_confidence": 0.75,
+      "classification_matched": true,
+      "field_accuracy": 0.5,
+      "field_precision": 1.0,
+      "field_recall": 0.5,
+      "field_f1": 0.667,
+      "matched_fields": 1,
+      "predicted_fields": 1,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-003",
+          "actual": null,
+          "matched": false,
+          "predicted": false
+        },
+        "amount": {
+          "expected": "7400.00",
+          "actual": "7400.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": [
+        {
+          "code": "missing_required_field",
+          "severity": "warning",
+          "field": "document_no",
+          "message": "Required field 'document_no' was not confidently extracted"
+        }
+      ]
+    },
+    {
+      "id": "invoice_04_core",
+      "document_type": "invoice",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-004",
+          "actual": "DEMO-INV-004",
+          "matched": true,
+          "predicted": true
+        },
+        "issuer": {
+          "expected": "厦门知岸示例软件有限公司",
+          "actual": "厦门知岸示例软件有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026-04-11",
+          "actual": "2026-04-11",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "56880.00",
+          "actual": "56880.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_04_finance",
+      "document_type": "invoice",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "issuer": {
+          "expected": "厦门知岸示例软件有限公司",
+          "actual": "厦门知岸示例软件有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "56880.00",
+          "actual": "56880.00",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_05_core",
+      "document_type": "invoice",
+      "classification_confidence": 0.75,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
+      "expected_fields": 4,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-005",
+          "actual": "DEMO-INV-005",
+          "matched": true,
+          "predicted": true
+        },
+        "issuer": {
+          "expected": "重庆云栈示例科技有限公司",
+          "actual": "重庆云栈示例科技有限公司",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026年5月16日",
+          "actual": "2026年5月16日",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "12999.90",
+          "actual": "12999.90",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "invoice_05_finance",
+      "document_type": "invoice",
+      "classification_confidence": 0.75,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "document_no": {
+          "expected": "DEMO-INV-005",
+          "actual": "DEMO-INV-005",
+          "matched": true,
+          "predicted": true
+        },
+        "amount": {
+          "expected": "12999.90",
+          "actual": "12999.90",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_01_core",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 3,
+      "predicted_fields": 3,
+      "expected_fields": 3,
+      "field_results": {
+        "title": {
+          "expected": "一月文档自动化运行报告",
+          "actual": "一月文档自动化运行报告",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "analyst.demo01",
+          "actual": "analyst.demo01",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026-01-31",
+          "actual": "2026-01-31",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_01_owner",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "title": {
+          "expected": "一月文档自动化运行报告",
+          "actual": "一月文档自动化运行报告",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "analyst.demo01",
+          "actual": "analyst.demo01",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_02_core",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 3,
+      "predicted_fields": 3,
+      "expected_fields": 3,
+      "field_results": {
+        "title": {
+          "expected": "二月合同审查分析报告",
+          "actual": "二月合同审查分析报告",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "ops.demo02",
+          "actual": "ops.demo02",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026/02/28",
+          "actual": "2026/02/28",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_02_owner",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "title": {
+          "expected": "二月合同审查分析报告",
+          "actual": "二月合同审查分析报告",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "ops.demo02",
+          "actual": "ops.demo02",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_03_core",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 3,
+      "predicted_fields": 3,
+      "expected_fields": 3,
+      "field_results": {
+        "title": {
+          "expected": "March Document Quality Report",
+          "actual": "March Document Quality Report",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "qa.demo03",
+          "actual": "qa.demo03",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026-03-31",
+          "actual": "2026-03-31",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_03_owner",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "title": {
+          "expected": "March Document Quality Report",
+          "actual": "March Document Quality Report",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "qa.demo03",
+          "actual": "qa.demo03",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_04_core",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 3,
+      "predicted_fields": 3,
+      "expected_fields": 3,
+      "field_results": {
+        "title": {
+          "expected": "四月票据处理月报",
+          "actual": "四月票据处理月报",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "finance.demo04",
+          "actual": "finance.demo04",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026-04-30",
+          "actual": "2026-04-30",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_04_owner",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "title": {
+          "expected": "四月票据处理月报",
+          "actual": "四月票据处理月报",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "finance.demo04",
+          "actual": "finance.demo04",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_05_core",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 3,
+      "predicted_fields": 3,
+      "expected_fields": 3,
+      "field_results": {
+        "title": {
+          "expected": "五月知识检索评测报告",
+          "actual": "五月知识检索评测报告",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "rag.demo05",
+          "actual": "rag.demo05",
+          "matched": true,
+          "predicted": true
+        },
+        "date": {
+          "expected": "2026年5月31日",
+          "actual": "2026年5月31日",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    },
+    {
+      "id": "report_05_owner",
+      "document_type": "report",
+      "classification_confidence": 0.95,
+      "classification_matched": true,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
+      "expected_fields": 2,
+      "field_results": {
+        "title": {
+          "expected": "五月知识检索评测报告",
+          "actual": "五月知识检索评测报告",
+          "matched": true,
+          "predicted": true
+        },
+        "owner": {
+          "expected": "rag.demo05",
+          "actual": "rag.demo05",
+          "matched": true,
+          "predicted": true
+        }
+      },
+      "anomalies": []
+    }
+  ]
+}

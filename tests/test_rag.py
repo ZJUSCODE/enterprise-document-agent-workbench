@@ -20,6 +20,14 @@ def test_rag_term_weighting_prefers_specific_hits() -> None:
     assert service._score(corpus[1], weighted_terms) > service._score(corpus[0], weighted_terms)
 
 
+def test_rag_ignores_single_character_overlap_for_chinese_questions() -> None:
+    service = RagService()
+    terms = service._terms("卫星轨道倾角和推进器参数是多少？")
+
+    assert all(len(term) > 1 for term in terms)
+    assert service._score("合同编号 DEMO-CT-001，甲方提供文档。", terms) == 0.0
+
+
 def test_rag_fallback_answer_uses_numbered_citations() -> None:
     service = RagService()
     answer = service.answer(

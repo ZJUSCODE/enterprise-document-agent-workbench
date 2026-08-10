@@ -151,7 +151,7 @@ class RagService:
         chinese = re.findall(r"[\u4e00-\u9fff]", question)
         bigrams = ["".join(chinese[index : index + 2]) for index in range(len(chinese) - 1)]
         # Preserve order while removing duplicates so repeated question words do not over-amplify a chunk.
-        return list(dict.fromkeys([*ascii_terms, *bigrams, *chinese]))
+        return list(dict.fromkeys([*ascii_terms, *bigrams] or chinese))
 
     def _weight_terms(self, terms: list[str], corpus: list[str]) -> list[QueryTerm]:
         if not terms:
