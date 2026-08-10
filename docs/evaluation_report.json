@@ -1,11 +1,11 @@
 {
   "case_count": 30,
-  "field_accuracy": 0.965,
-  "field_precision": 0.988,
-  "field_recall": 0.965,
-  "field_f1": 0.976,
-  "matched_fields": 82,
-  "predicted_fields": 83,
+  "field_accuracy": 1.0,
+  "field_precision": 1.0,
+  "field_recall": 1.0,
+  "field_f1": 1.0,
+  "matched_fields": 85,
+  "predicted_fields": 85,
   "expected_fields": 85,
   "classification_accuracy": 1.0,
   "field_breakdown": {
@@ -28,12 +28,12 @@
       "total": 10
     },
     "document_no": {
-      "accuracy": 0.889,
+      "accuracy": 1.0,
       "precision": 1.0,
-      "recall": 0.889,
-      "f1": 0.941,
-      "matched": 16,
-      "predicted": 16,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 18,
+      "predicted": 18,
       "total": 18
     },
     "effective_date": {
@@ -46,11 +46,11 @@
       "total": 5
     },
     "issuer": {
-      "accuracy": 0.857,
-      "precision": 0.857,
-      "recall": 0.857,
-      "f1": 0.857,
-      "matched": 6,
+      "accuracy": 1.0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "matched": 7,
       "predicted": 7,
       "total": 7
     },
@@ -573,24 +573,24 @@
       "document_type": "invoice",
       "classification_confidence": 0.75,
       "classification_matched": true,
-      "field_accuracy": 0.5,
-      "field_precision": 0.667,
-      "field_recall": 0.5,
-      "field_f1": 0.571,
-      "matched_fields": 2,
-      "predicted_fields": 3,
+      "field_accuracy": 1.0,
+      "field_precision": 1.0,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 4,
+      "predicted_fields": 4,
       "expected_fields": 4,
       "field_results": {
         "document_no": {
           "expected": "DEMO-INV-003",
-          "actual": null,
-          "matched": false,
-          "predicted": false
+          "actual": "DEMO-INV-003",
+          "matched": true,
+          "predicted": true
         },
         "issuer": {
           "expected": "River Example Systems Ltd.",
-          "actual": "| buyer | date |",
-          "matched": false,
+          "actual": "River Example Systems Ltd.",
+          "matched": true,
           "predicted": true
         },
         "date": {
@@ -606,33 +606,26 @@
           "predicted": true
         }
       },
-      "anomalies": [
-        {
-          "code": "missing_required_field",
-          "severity": "warning",
-          "field": "document_no",
-          "message": "Required field 'document_no' was not confidently extracted"
-        }
-      ]
+      "anomalies": []
     },
     {
       "id": "invoice_03_finance",
       "document_type": "invoice",
       "classification_confidence": 0.75,
       "classification_matched": true,
-      "field_accuracy": 0.5,
+      "field_accuracy": 1.0,
       "field_precision": 1.0,
-      "field_recall": 0.5,
-      "field_f1": 0.667,
-      "matched_fields": 1,
-      "predicted_fields": 1,
+      "field_recall": 1.0,
+      "field_f1": 1.0,
+      "matched_fields": 2,
+      "predicted_fields": 2,
       "expected_fields": 2,
       "field_results": {
         "document_no": {
           "expected": "DEMO-INV-003",
-          "actual": null,
-          "matched": false,
-          "predicted": false
+          "actual": "DEMO-INV-003",
+          "matched": true,
+          "predicted": true
         },
         "amount": {
           "expected": "7400.00",
@@ -641,14 +634,7 @@
           "predicted": true
         }
       },
-      "anomalies": [
-        {
-          "code": "missing_required_field",
-          "severity": "warning",
-          "field": "document_no",
-          "message": "Required field 'document_no' was not confidently extracted"
-        }
-      ]
+      "anomalies": []
     },
     {
       "id": "invoice_04_core",

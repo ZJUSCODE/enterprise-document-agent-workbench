@@ -165,14 +165,7 @@ class ExtractorService:
             ),
         }
         table_fields = self._extract_from_tables(parsed.tables)
-        fields = {
-            **fields,
-            **{
-                key: value
-                for key, value in table_fields.items()
-                if self._should_replace_field(fields.get(key), value)
-            },
-        }
+        fields = {**fields, **table_fields}
         fields = {key: value for key, value in fields.items() if value}
         if parsed.tables:
             fields["table_count"] = len(parsed.tables)
@@ -224,6 +217,7 @@ class ExtractorService:
             "编号": "document_no",
             "no": "document_no",
             "number": "document_no",
+            "invoice number": "document_no",
             "开票方": "issuer",
             "供应商": "issuer",
             "issuer": "issuer",
@@ -266,11 +260,3 @@ class ExtractorService:
 
     def _normalize_header(self, value: Any) -> str:
         return re.sub(r"\s+", " ", str(value or "").strip().lower())
-
-    def _should_replace_field(self, current: Any, candidate: Any) -> bool:
-        if candidate is None or str(candidate).strip() == "":
-            return False
-        if current is None:
-            return True
-        stripped = str(current).strip()
-        return stripped in {"", "|", "-", "n/a", "N/A"}

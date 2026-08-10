@@ -38,3 +38,14 @@ def test_report_title_stops_before_owner_and_date(tmp_path: Path) -> None:
     assert result.fields["title"] == "企业文档流程自动化月度运行报告"
     assert result.fields["owner"] == "ops.demo"
     assert result.fields["date"] == "2026-04-18"
+
+
+def test_english_invoice_csv_uses_structured_table_fields() -> None:
+    sample = Path(__file__).resolve().parents[1] / "samples" / "benchmark" / "invoice_03.csv"
+    parsed = DocumentParser().parse(sample, sample.name)
+    document_type, _ = classify_document(parsed.text, sample.name)
+    result = ExtractorService().extract(parsed, document_type=document_type, template_id="invoice_review")
+
+    assert document_type == "invoice"
+    assert result.fields["document_no"] == "DEMO-INV-003"
+    assert result.fields["issuer"] == "River Example Systems Ltd."

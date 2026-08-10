@@ -4,11 +4,11 @@
 
 - Case count: 30
 - Classification accuracy: 1.000
-- Field accuracy: 0.965
-- Field precision: 0.988
-- Field recall: 0.965
-- Field F1: 0.976
-- Matched / predicted / expected fields: 82 / 83 / 85
+- Field accuracy: 1.000
+- Field precision: 1.000
+- Field recall: 1.000
+- Field F1: 1.000
+- Matched / predicted / expected fields: 85 / 85 / 85
 
 ## Field Breakdown
 
@@ -16,9 +16,9 @@
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | amount | 1.000 | 1.000 | 1.000 | 15 | 15 | 15 |
 | date | 1.000 | 1.000 | 1.000 | 10 | 10 | 10 |
-| document_no | 1.000 | 0.889 | 0.941 | 16 | 16 | 18 |
+| document_no | 1.000 | 1.000 | 1.000 | 18 | 18 | 18 |
 | effective_date | 1.000 | 1.000 | 1.000 | 5 | 5 | 5 |
-| issuer | 0.857 | 0.857 | 0.857 | 6 | 7 | 7 |
+| issuer | 1.000 | 1.000 | 1.000 | 7 | 7 | 7 |
 | owner | 1.000 | 1.000 | 1.000 | 10 | 10 | 10 |
 | party_a | 1.000 | 1.000 | 1.000 | 5 | 5 | 5 |
 | party_b | 1.000 | 1.000 | 1.000 | 5 | 5 | 5 |
@@ -212,33 +212,27 @@
 
 - Predicted type: `invoice`
 - Classification matched: `True`
-- Field accuracy: `0.500`
-- Field precision / recall / F1: `0.667` / `0.500` / `0.571`
+- Field accuracy: `1.000`
+- Field precision / recall / F1: `1.000` / `1.000` / `1.000`
 
 | Field | Expected | Actual | Predicted | Matched |
 | --- | --- | --- | --- | --- |
-| document_no | DEMO-INV-003 | None | False | False |
-| issuer | River Example Systems Ltd. | \| buyer \| date \| | True | False |
+| document_no | DEMO-INV-003 | DEMO-INV-003 | True | True |
+| issuer | River Example Systems Ltd. | River Example Systems Ltd. | True | True |
 | date | 2026-03-22 | 2026-03-22 | True | True |
 | amount | 7400.00 | 7400.00 | True | True |
-
-Anomalies:
-- `missing_required_field`: Required field 'document_no' was not confidently extracted
 
 ### invoice_03_finance
 
 - Predicted type: `invoice`
 - Classification matched: `True`
-- Field accuracy: `0.500`
-- Field precision / recall / F1: `1.000` / `0.500` / `0.667`
+- Field accuracy: `1.000`
+- Field precision / recall / F1: `1.000` / `1.000` / `1.000`
 
 | Field | Expected | Actual | Predicted | Matched |
 | --- | --- | --- | --- | --- |
-| document_no | DEMO-INV-003 | None | False | False |
+| document_no | DEMO-INV-003 | DEMO-INV-003 | True | True |
 | amount | 7400.00 | 7400.00 | True | True |
-
-Anomalies:
-- `missing_required_field`: Required field 'document_no' was not confidently extracted
 
 ### invoice_04_core
 
